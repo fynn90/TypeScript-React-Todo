@@ -1,22 +1,53 @@
-
 interface TodoData {
-  id: string;
-  title: string;
+  id: number;
+  text: string;
   completed: boolean;
 }
 
-interface HeaderComponentProp {
+interface TodoTextComponentProp {
+  text?:string;
   editing: boolean;
   newTodo: boolean;
-  key: string;
-  todo: TodoData;
   onSave: (val: string) => void;
-  onDestroy: () => void;
-  onEdit: () => void;
-  onCancel: (e: React.KeyboardEvent) => void;
-  onToggle: () => void;
 }
 
-interface HeaderComponentState {
+interface TodoTextComponentState {
   text: string;
+}
+
+interface FooderComponentProp {
+  activeCount: number;
+  completedCount: number;
+  onClearCompleted: () => void;
+}
+
+interface FooderComponentState {
+  itemWord: string
+}
+
+interface LinkComponentProp {
+  active: boolean;
+  setFilter: ()=>void;
+  children: any
+}
+
+interface VisibleTodoListComponentProp {
+  filteredTodos: TodoData[];
+  actions: any;
+}
+
+interface StateInterface {
+  todos: TodoData[];
+  visibilityFilter: string;
+}
+
+interface TodoItemComponentProp {
+  todo: TodoData;
+  editTodo: ()=>void;
+  deleteTodo: (id: number)=>void;
+  completeTodo: (id: number)=>void;
+}
+
+interface TodoItemComponentState {
+  editing: boolean;
 }

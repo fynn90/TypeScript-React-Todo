@@ -8,6 +8,7 @@
     "outDir": "ts-build",
     "jsx": "react",
     "strict": true,
+    // "moduleResolution":"Node",
     "lib":[
       "es6",
       "es7",
