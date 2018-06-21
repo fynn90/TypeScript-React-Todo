@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'todomvc-app-css/index.css'
+import 'todomvc-app-css/index.css';
 
 const App = () => {
     return (
