@@ -15,6 +15,11 @@ const initialState = [
   }
 ];
 
+/**
+ * 数据操作 添加/删除/修改/清空
+ * @param state Todo数据集合
+ * @param action 操作类型
+ */
 export default function (state: TodoData[] = initialState, action: ActionsIntereface) {
   switch (action.type) {
     case ADD_TODO:
