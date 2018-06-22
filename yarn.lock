@@ -81,6 +81,12 @@
     "@types/history" "*"
     "@types/react" "*"
 
+"@types/react-test-renderer@^16.0.1":
+  version "16.0.1"
+  resolved "http://r.cnpmjs.org/@types/react-test-renderer/download/@types/react-test-renderer-16.0.1.tgz#36ee8c4fe33c61d460ad0e7bc42a2d0ddcc775a1"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.3.17":
   version "16.3.17"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.3.17.tgz#d59d1a632570b0713946ed9c2949d994773633c5"
@@ -6449,6 +6455,10 @@ react-is@^16.4.0:
   version "16.4.0"
   resolved "http://registry.npm.taobao.org/react-is/download/react-is-16.4.0.tgz#cc9fdc855ac34d2e7d9d2eb7059bbc240d35ffcf"
 
+react-is@^16.4.1:
+  version "16.4.1"
+  resolved "http://r.cnpmjs.org/react-is/download/react-is-16.4.1.tgz#d624c4650d2c65dbd52c72622bbf389435d9776e"
+
 react-loadable@^5.4.0:
   version "5.4.0"
   resolved "http://registry.npm.taobao.org/react-loadable/download/react-loadable-5.4.0.tgz#3b6b7d51121a7868fd155be848a36e02084742c9"
@@ -6572,6 +6582,15 @@ react-test-renderer@^16.0.0-0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
     react-is "^16.4.0"
+
+react-test-renderer@^16.4.1:
+  version "16.4.1"
+  resolved "http://r.cnpmjs.org/react-test-renderer/download/react-test-renderer-16.4.1.tgz#f2fb30c2c7b517db6e5b10ed20bb6b0a7ccd8d70"
+  dependencies:
+    fbjs "^0.8.16"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+    react-is "^16.4.1"
 
 react@^16.4.0:
   version "16.4.0"

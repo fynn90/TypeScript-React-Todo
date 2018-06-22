@@ -10,7 +10,6 @@ export default class Footer extends Component<FooderComponentProp, FooderCompone
     public state: FooderComponentState;
     constructor(props: FooderComponentProp) {
         super(props);
-        // const { activeCount, completedCount, onClearCompleted } = this.props
         this.state = {
             itemWord: (this.props.activeCount === 1 ? 'item' : 'items')
         };

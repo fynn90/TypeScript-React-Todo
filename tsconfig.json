@@ -8,7 +8,8 @@
     "outDir": "ts-build",
     "jsx": "react",
     "strict": true,
-    // "moduleResolution":"Node",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
     "lib":[
       "es6",
       "es7",

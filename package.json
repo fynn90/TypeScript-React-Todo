@@ -6,7 +6,8 @@
   "author": "Fynn <fynn.90@outlook.com>",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --inline --hot --color",
-    "build": "cross-env NODE_ENV=production webpack --mode production "
+    "build": "cross-env NODE_ENV=production webpack --mode production ",
+    "test": "jest"
   },
   "license": "MIT",
   "devDependencies": {
@@ -18,6 +19,7 @@
     "@types/react-redux": "^6.0.2",
     "@types/react-router-dom": "^4.2.7",
     "@types/react-router-redux": "^5.0.15",
+    "@types/react-test-renderer": "^16.0.1",
     "@types/redux-actions": "^2.3.0",
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.6",
@@ -40,6 +42,7 @@
     "prop-types": "^15.6.1",
     "react-docgen-typescript": "^1.6.0",
     "react-styleguidist": "^7.0.17",
+    "react-test-renderer": "^16.4.1",
     "style-loader": "^0.21.0",
     "ts-jest": "^22.4.6",
     "ts-loader": "^4.4.1",
@@ -67,5 +70,22 @@
     "reselect": "^3.0.1",
     "todomvc-app-css": "^2.1.2",
     "typesafe-actions": "^2.0.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test))\\.(ts|tsx|js)$",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
   }
 }
