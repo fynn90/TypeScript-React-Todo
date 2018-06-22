@@ -5,15 +5,15 @@ import Link from '../components/Link';
 
 const mapStateToProps = (state: StateInterface, ownProps) => ({
     active: ownProps.filter === state.visibilityFilter
-})
+});
 
 const mapDispatchToProps = (dispatch: Dispatch, ownProps) => ({
     setFilter: () => {
-        dispatch(setVisibilityFilter(ownProps.filter))
+        dispatch(setVisibilityFilter(ownProps.filter));
     }
-})
+});
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Link)
+)(Link);

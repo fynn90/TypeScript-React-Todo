@@ -5,18 +5,18 @@ const FILTER_TITLES: any = {
     [SHOW_ALL]: 'All',
     [SHOW_ACTIVE]: 'Active',
     [SHOW_COMPLETED]: 'Completed'
-}
+};
 export default class Footer extends Component<FooderComponentProp, FooderComponentState> {
-    public state: FooderComponentState
+    public state: FooderComponentState;
     constructor(props: FooderComponentProp) {
-        super(props)
+        super(props);
         // const { activeCount, completedCount, onClearCompleted } = this.props
         this.state = {
-            itemWord :(this.props.activeCount === 1 ? 'item' : 'items')
+            itemWord: (this.props.activeCount === 1 ? 'item' : 'items')
         };
     }
-    clearCompleted= () => {
-        this.props.onClearCompleted()
+    clearCompleted = () => {
+        this.props.onClearCompleted();
     }
     render() {
         return (
@@ -39,11 +39,11 @@ export default class Footer extends Component<FooderComponentProp, FooderCompone
                         className="clear-completed"
                         onClick={this.clearCompleted}
                     >
-                    Clear completed
+                        Clear completed
                     </button>
 
                 }
             </footer>
-        )
+        );
     }
 }

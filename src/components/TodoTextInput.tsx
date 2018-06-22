@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { ENTER_KEY, ESCAPE_KEY } from '../constants/index';
+import { ENTER_KEY } from '../constants/index';
 export default class TodoTextInput extends Component<TodoTextComponentProp, TodoTextComponentState> {
     public state: TodoTextComponentState;
     constructor(props: TodoTextComponentProp) {
-        super(props)
-        const text = this.props.text || ''
+        super(props);
+        const text = this.props.text || '';
         this.state = {
             text: text
         };
@@ -13,7 +13,7 @@ export default class TodoTextInput extends Component<TodoTextComponentProp, Todo
     handleBlur = (e: React.FormEvent): void => {
         var input: any = e.target;
         if (!this.props.newTodo) {
-            this.props.onSave(input)
+            this.props.onSave(input);
         }
     }
     handleChange = (e: React.FormEvent): void => {
@@ -22,9 +22,11 @@ export default class TodoTextInput extends Component<TodoTextComponentProp, Todo
     }
     handleSubmit = (e: React.KeyboardEvent): void => {
         var val = this.state.text.trim();
-        if (val && e.keyCode === ESCAPE_KEY) {
+        if (val && e.keyCode === ENTER_KEY) {
             this.props.onSave(val);
-            this.setState({ text: val });
+            if (this.props.newTodo) {
+                this.setState({ text: '' });
+            }
         }
     }
     render () {
@@ -39,6 +41,6 @@ export default class TodoTextInput extends Component<TodoTextComponentProp, Todo
                 onChange={this.handleChange}
                 onKeyDown={this.handleSubmit}
             />
-        )
+        );
     }
 }

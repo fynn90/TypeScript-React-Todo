@@ -43,11 +43,24 @@ interface StateInterface {
 
 interface TodoItemComponentProp {
   todo: TodoData;
-  editTodo: ()=>void;
+  editTodo: (id: number, text: string)=>void;
   deleteTodo: (id: number)=>void;
   completeTodo: (id: number)=>void;
 }
 
 interface TodoItemComponentState {
   editing: boolean;
+}
+
+interface MainComponentProp {
+  todosCount: number,
+  completedCount: number
+  actions: any
+}
+
+interface ActionsIntereface {
+  type: string;
+  text?: string;
+  id?: number;
+  filter?: string;
 }

@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 export default class VisibleTodoList extends Component<VisibleTodoListComponentProp> {
     constructor(props: VisibleTodoListComponentProp) {
-        super(props)
+        super(props);
     }
     render () {
         return (
@@ -10,7 +10,7 @@ export default class VisibleTodoList extends Component<VisibleTodoListComponentP
                 {this.props.filteredTodos.map(todo =>
                     <TodoItem key={todo.id} todo={todo} {...this.props.actions} />
                 )}
-            </ul> 
-        )
+            </ul>
+        );
     }
 }

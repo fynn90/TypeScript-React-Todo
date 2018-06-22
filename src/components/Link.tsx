@@ -1,9 +1,9 @@
-import React,{Component} from 'react'
-import classnames from 'classnames'
+import React, { Component } from 'react';
+import classnames from 'classnames';
 
 export default class Link extends Component<LinkComponentProp> {
     constructor(props: LinkComponentProp) {
-        super(props)
+        super(props);
     }
     render () {
         return (
@@ -14,6 +14,6 @@ export default class Link extends Component<LinkComponentProp> {
             >
                 {this.props.children}
             </a>
-        )
+        );
     }
 }
